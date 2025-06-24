@@ -1,0 +1,312 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kon</title>
+    <meta name="description" content="Open source software by Kaizo Konpaku. Creative tools for everyone.">
+    <meta name="author" content="Kaizo Konpaku">
+    <meta name="keywords" content="Kon, Kaizo Konpaku, open source, software engineer, creative, web experiment, interactive, portfolio, tools, github">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Kon aka Kaizo Konpaku">
+    <meta property="og:description" content="Open source software by Kaizo Konpaku. Creative tools for everyone.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/KaizoKonpaku">
+    <meta property="og:image" content="public/og-image.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Kon aka Kaizo Konpaku">
+    <meta name="twitter:description" content="Open source software by Kaizo Konpaku. Creative tools for everyone.">
+    <meta name="twitter:site" content="@KaizoKonpakuu">
+    <meta name="twitter:creator" content="@KaizoKonpakuu">
+    <meta name="twitter:image" content="public/og-image.png">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="icon" href="public/logo.svg" type="image/svg+xml">
+    <link rel="icon" href="public/logo.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            font-family: 'VT323', monospace;
+            color: #f5f5f5;
+        }
+
+        .space-container {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            perspective: 1000px;
+        }
+
+        .grid {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-style: preserve-3d;
+            background-image: 
+                radial-gradient(circle at 0 0, rgba(128, 128, 128, 0.5) 1.3px, transparent 1.3px),
+                linear-gradient(rgba(128, 128, 128, 0.15) 1.3px, transparent 1.3px),
+                linear-gradient(90deg, rgba(128, 128, 128, 0.15) 1.3px, transparent 1.3px);
+            background-size: 100px 100px;
+            background-position: 0 0;
+            width: 1000vw;
+            height: 1000vh;
+            transform: translate(-50%, -50%);
+        }
+
+        #svg-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1001;
+            pointer-events: none;
+            width: 90vw;
+            max-width: 500px;
+            height: auto;
+            aspect-ratio: 2.5 / 1;
+            min-width: 220px;
+            font-family: 'VT323', monospace;
+        }
+        #svg-container svg {
+            width: 100%;
+            height: auto;
+            max-width: 500px;
+            min-width: 220px;
+            aspect-ratio: 2.5 / 1;
+        }
+
+        @media (max-width: 900px) {
+            .grid {
+                background-size: 60px 60px;
+                width: 2000vw;
+                height: 2000vh;
+            }
+            #svg-container {
+                max-width: 350px;
+                min-width: 160px;
+            }
+            #svg-container svg {
+                max-width: 350px;
+                min-width: 160px;
+            }
+            #links-bar {
+                transform: translate(-50%, calc(-50% + 120px));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                background-size: 36px 36px;
+                width: 3000vw;
+                height: 3000vh;
+            }
+            #svg-container {
+                max-width: 220px;
+                min-width: 100px;
+            }
+            #svg-container svg {
+                max-width: 220px;
+                min-width: 100px;
+            }
+            #links-bar {
+                transform: translate(-50%, calc(-50% + 90px));
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: #fff;
+                color: #181818;
+            }
+            .grid {
+                background-image: 
+                    radial-gradient(circle at 0 0, rgba(80, 80, 80, 0.25) 0.8px, transparent 0.8px),
+                    linear-gradient(rgba(80, 80, 80, 0.08) 0.8px, transparent 0.8px),
+                    linear-gradient(90deg, rgba(80, 80, 80, 0.08) 0.8px, transparent 0.8px);
+            }
+            #svg-container rect {
+                fill: #111 !important;
+            }
+            #links-bar .links-sep {
+                color: #bbb;
+            }
+            #links-bar a {
+                color: #000 !important;
+                background: rgba(255,255,255,0.7);
+                padding: 0 0.2em;
+                border-radius: 3px;
+            }
+            #links-bar a:hover {
+                text-decoration: underline;
+                background: #ffe;
+            }
+        }
+
+        #links-bar {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, calc(-50% + 150px));
+            z-index: 1002;
+            text-align: center;
+            font-family: 'VT323', monospace;
+            font-size: 1.2rem;
+            letter-spacing: 0.03em;
+            padding: 0.3em 1.2em;
+            pointer-events: auto;
+        }
+        #links-bar a {
+            font-weight: 500;
+            transition: color 0.2s;
+            color: #fff;
+        }
+        #links-bar .links-sep {
+            color: #aaa;
+            font-size: 1.1em;
+            padding: 0 0.2em;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="space-container">
+        <div class="grid" id="grid"></div>
+        <div id="svg-container">
+          <svg viewBox="0 0 500 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible; width: 100%; height: auto;">
+            <defs>
+              <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <!-- k -->
+            <rect id="k1" x="20" y="20" width="40" height="160" fill="white" filter="url(#glow)" style="transform-origin: 40px 100px; transition: transform 0.2s ease-out;"/>
+            <rect id="k2" x="60" y="80" width="40" height="40" fill="white" filter="url(#glow)" style="transform-origin: 80px 100px; transition: transform 0.2s ease-out;"/>
+            <rect id="k3" x="100" y="40" width="40" height="40" fill="white" filter="url(#glow)" style="transform-origin: 120px 60px; transition: transform 0.2s ease-out;"/>
+            <rect id="k4" x="100" y="120" width="40" height="60" fill="white" filter="url(#glow)" style="transform-origin: 120px 150px; transition: transform 0.2s ease-out;"/>
+            <!-- o -->
+            <rect id="o1" x="210" y="20" width="40" height="40" fill="white" filter="url(#glow)" style="transform-origin: 230px 40px; transition: transform 0.2s ease-out;"/>
+            <rect id="o2" x="170" y="60" width="40" height="80" fill="white" filter="url(#glow)" style="transform-origin: 190px 100px; transition: transform 0.2s ease-out;"/>
+            <rect id="o3" x="250" y="60" width="40" height="80" fill="white" filter="url(#glow)" style="transform-origin: 270px 100px; transition: transform 0.2s ease-out;"/>
+            <rect id="o4" x="210" y="140" width="40" height="40" fill="white" filter="url(#glow)" style="transform-origin: 230px 160px; transition: transform 0.2s ease-out;"/>
+            <!-- n -->
+            <rect id="n1" x="310" y="60" width="40" height="120" fill="white" filter="url(#glow)" style="transform-origin: 330px 120px; transition: transform 0.2s ease-out;"/>
+            <rect id="n2" x="310" y="60" width="80" height="40" fill="white" filter="url(#glow)" style="transform-origin: 350px 80px; transition: transform 0.2s ease-out;"/>
+            <rect id="n3" x="390" y="100" width="40" height="80" fill="white" filter="url(#glow)" style="transform-origin: 410px 140px; transition: transform 0.2s ease-out;"/>
+          </svg>
+        </div>
+        <div id="links-bar">
+          <a href="https://github.com/KaizoKonpaku" target="_blank" rel="noopener">GitHub</a>
+          <span class="links-sep">|</span>
+          <a href="https://x.com/KaizoKonpakuu" target="_blank" rel="noopener">X</a>
+        </div>
+    </div>
+
+    <script>
+        const grid = document.getElementById('grid');
+        const svgContainer = document.getElementById('svg-container');
+        const svgParts = [
+            'k1', 'k2', 'k3', 'k4',
+            'o1', 'o2', 'o3', 'o4', 
+            'n1', 'n2', 'n3'
+        ].map(id => document.getElementById(id));
+        const partPhysics = svgParts.map((part, index) => ({
+            x: 0,
+            y: 0,
+            velX: 0,
+            velY: 0,
+            mass: 0.8 + (index * 0.02),
+            dragStrength: 0.15 + (index * 0.01),
+            lastAngle: 0
+        }));
+        let mouseX = 0, mouseY = 0, targetX = 0, targetY = 0, currentX = 0, currentY = 0;
+        document.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX - window.innerWidth / 2) / window.innerWidth;
+            mouseY = (e.clientY - window.innerHeight / 2) / window.innerHeight;
+            targetX = mouseX * 400;
+            targetY = mouseY * 400;
+        });
+        function updateSVGParts() {
+            const cursorDistanceFromCenter = Math.sqrt(mouseX * mouseX + mouseY * mouseY);
+            svgParts.forEach((part, index) => {
+                if (!part) return;
+                const physics = partPhysics[index];
+                const dragForce = 80;
+                const targetX = mouseX * dragForce * cursorDistanceFromCenter;
+                const targetY = mouseY * dragForce * cursorDistanceFromCenter;
+                const springForce = 0.1;
+                const dampening = 0.85;
+                const forceX = (targetX - physics.x) * springForce * physics.dragStrength;
+                const forceY = (targetY - physics.y) * springForce * physics.dragStrength;
+                physics.velX += forceX;
+                physics.velY += forceY;
+                physics.velX *= dampening;
+                physics.velY *= dampening;
+                physics.x += physics.velX;
+                physics.y += physics.velY;
+                const restoreForce = 0.05;
+                if (cursorDistanceFromCenter < 0.3) {
+                    physics.x *= (1 - restoreForce);
+                    physics.y *= (1 - restoreForce);
+                }
+                const velocityMag = Math.sqrt(physics.velX * physics.velX + physics.velY * physics.velY);
+                let rotationAngle = physics.lastAngle;
+                if (velocityMag > 0.5) {
+                    rotationAngle = Math.atan2(physics.velY, physics.velX) * (180 / Math.PI) * 0.1;
+                    physics.lastAngle = rotationAngle;
+                }
+                part.style.transform = `translate(${physics.x}px, ${physics.y}px) rotate(${rotationAngle}deg)`;
+            });
+        }
+        function animate() {
+            currentX += (targetX - currentX) * 0.05;
+            currentY += (targetY - currentY) * 0.05;
+            grid.style.transform = `translate(-50%, -50%) translate3d(${currentX}px, ${currentY}px, 0) rotateX(${-mouseY * 3}deg) rotateY(${mouseX * 3}deg)`;
+            svgContainer.style.transform = `translate(-50%, -50%) translate(${currentX}px, ${currentY}px)`;
+            const linksBar = document.getElementById('links-bar');
+            if (linksBar) {
+                let offset = 150;
+                if (window.innerWidth <= 600) {
+                    offset = 90;
+                } else if (window.innerWidth <= 900) {
+                    offset = 120;
+                }
+                linksBar.style.transform = `translate(-50%, calc(-50% + ${offset}px)) translate(${currentX}px, ${currentY}px)`;
+            }
+            updateSVGParts();
+            requestAnimationFrame(animate);
+        }
+        let touchStartX = 0, touchStartY = 0, isDragging = false;
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            isDragging = true;
+        });
+        document.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const touchX = e.touches[0].clientX;
+            const touchY = e.touches[0].clientY;
+            const deltaX = (touchX - touchStartX) / window.innerWidth;
+            const deltaY = (touchY - touchStartY) / window.innerHeight;
+            targetX += deltaX * 400;
+            targetY += deltaY * 400;
+            touchStartX = touchX;
+            touchStartY = touchY;
+            e.preventDefault();
+            document.body.style.overflow = 'hidden';
+            mouseX = (touchX - window.innerWidth / 2) / window.innerWidth;
+            mouseY = (touchY - window.innerHeight / 2) / window.innerHeight;
+        });
+        document.addEventListener('touchend', () => {
+            isDragging = false;
+            document.body.style.overflow = '';
+        });
+        animate();
+    </script>
+</body>

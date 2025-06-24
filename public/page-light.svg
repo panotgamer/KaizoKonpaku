@@ -1,0 +1,558 @@
+<svg width="100%" height="520" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div class="container" xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        :root {
+          --hue-basic: #f5f5f5;
+          --hue-border: #ececec;
+          --hue-light: rgba(0, 94, 255, 0.4);
+          --hue-medium: rgba(0, 94, 255, 0.6);
+          --hue-dark: rgba(0, 94, 255, 0.8);
+          --hue-very-dark: rgba(0, 94, 255, 1);
+
+          font-family: monospace;
+          color: var(--hue-medium)
+        }
+
+        .container {
+          padding: 10px;
+        }
+
+        .description {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          text-align: justify;
+        }
+
+        .social {
+          align-self: flex-end;
+        }
+
+        .talk,
+        strong {
+          color: var(--hue-very-dark);
+          font-weight: bold;
+        }
+
+        ul {
+          margin: 0;
+          padding-left: 1rem;
+        }
+
+        a {
+          color: var(--hue-medium)
+        }
+
+        .square {
+          width: 2rem;
+          height: 2rem;
+          margin: 0.1rem;
+          border-radius: 0.3em;
+          border: 0.1rem solid var(--hue-border);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .graph {
+          display: flex;
+          flex-direction: column;
+          transform: translateX(90px);
+        }
+
+        .years {
+          display: flex;
+        }
+
+        .year {
+          display: flex;
+          padding: 1rem;
+        }
+
+        .week {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .title {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes scroll {
+          0% {
+            transform: translateX(90px);
+          }
+
+          100% {
+            transform: translateX(calc(-100% + 100dvw));
+          }
+        }
+
+        .container {
+          animation: fadeIn 4s ease-in;
+        }
+
+        .graph {
+          position: absolute;
+          animation: scroll 36s 2s ease-in-out alternate infinite;
+        }
+      </style>
+
+      <div class="description">
+        <article class="social">
+          <p class="talk">Knock Knock</p>
+          <p>kaizokonpaku.com</p>
+          <p>social/ @KaizoKonpaku</p>
+        </article>
+        <p><strong>Kon</strong> aka <strong>Kaizo Konpaku</strong>, is a software engineer who builds stuff. <span>Ichigo you jerk, find me a job already!</span>
+</p>
+      </div>
+      <div class="graph">
+        <div class="years">
+          <div class="year">
+            <!-- Week 1 I -->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+            </div>
+            <!-- Week 2 I -->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-very-dark);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-very-dark);"></div>
+            </div>
+            <!-- Week 3 I -->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-very-dark);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-very-dark);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-very-dark);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+            </div>
+            <!-- Week 4 I -->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-medium);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+            </div>
+            <!-- Week 5 I -->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+            </div>
+            <!-- Week 6 C-->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+            </div>
+            <!-- Week 7 C-->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-medium);"></div>
+            </div>
+            <!-- Week 8 C-->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+            </div>
+            <!-- Week 9 C-->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+            </div>
+            <!-- Week 10 H-->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-medium);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-medium);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+            </div>
+            <!-- Week 11 H-->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-medium);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+            </div>
+            <!-- Week 12 H-->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-very-dark);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-medium);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+            </div>
+            <!-- Week 13 I-->
+           <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+            </div>
+            <!-- Week 2 I -->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-very-dark);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-very-dark);"></div>
+            </div>
+            <!-- Week 3 I -->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-very-dark);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-very-dark);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-very-dark);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+            </div>
+            <!-- Week 4 I -->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-medium);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+            </div>
+            <!-- Week 5 I -->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+            </div>
+            <!-- Week 1-->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-medium)"></div>
+              <div class="square" style="background-color: var(--hue-dark)"></div>
+              <div class="square" style="background-color: var(--hue-light)"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-dark)"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+            </div>
+            <!-- Week 1-->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+            </div>
+            <!-- Week -->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+            </div>
+            <!-- Week -->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+            </div>
+            <!-- Week -->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-medium);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+            </div>
+            <!-- Week -->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+            </div>
+            <!-- Week -->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-very-dark);"></div>
+            </div>
+            <!-- Week -->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-medium);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+            </div>
+            <!-- Week 2-->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic)"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic)"></div>
+              <div class="square" style="background-color: var(--hue-basic)"></div>
+              <div class="square" style="background-color: var(--hue-basic)"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+            </div>
+            <!-- Week 2-->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+            </div>
+            <!-- Week 2-->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-medium);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+            </div>
+            <!-- Week 2-->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+            </div>
+            <!-- Week -->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-medium);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-very-dark);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+            </div>
+            <!-- Week -->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+            </div>
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+            </div>
+            <!-- Week 2-->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+            </div>
+            <!-- Week 2-->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+            </div>
+            <!-- Week -->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-very-dark);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+            </div>
+            <!-- Week -->
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+            </div>
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+            </div>
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+            </div>
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+            </div>
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+            </div>
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-dark);"></div>
+              <div class="square" style="background-color: var(--hue-light);"></div>
+            </div>
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+            </div>
+            <div class="week">
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+              <div class="square" style="background-color: var(--hue-basic);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="title">
+          <p>Jan, 2025</p>
+          <p>Jul, 2025</p>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
+
+<!-- Design Inspired from terkelg -->

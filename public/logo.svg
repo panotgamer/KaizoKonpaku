@@ -1,0 +1,25 @@
+<svg viewBox="0 0 500 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible; width: 100%; height: auto;">
+<defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+    <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+    </filter>
+</defs>
+<!-- k -->
+<rect id="k1" x="20" y="20" width="40" height="160" fill="white" filter="url(#glow)" style="transform-origin: 40px 100px; transition: transform 0.2s ease-out;"/>
+<rect id="k2" x="60" y="80" width="40" height="40" fill="white" filter="url(#glow)" style="transform-origin: 80px 100px; transition: transform 0.2s ease-out;"/>
+<rect id="k3" x="100" y="40" width="40" height="40" fill="white" filter="url(#glow)" style="transform-origin: 120px 60px; transition: transform 0.2s ease-out;"/>
+<rect id="k4" x="100" y="120" width="40" height="60" fill="white" filter="url(#glow)" style="transform-origin: 120px 150px; transition: transform 0.2s ease-out;"/>
+<!-- o -->
+<rect id="o1" x="210" y="20" width="40" height="40" fill="white" filter="url(#glow)" style="transform-origin: 230px 40px; transition: transform 0.2s ease-out;"/>
+<rect id="o2" x="170" y="60" width="40" height="80" fill="white" filter="url(#glow)" style="transform-origin: 190px 100px; transition: transform 0.2s ease-out;"/>
+<rect id="o3" x="250" y="60" width="40" height="80" fill="white" filter="url(#glow)" style="transform-origin: 270px 100px; transition: transform 0.2s ease-out;"/>
+<rect id="o4" x="210" y="140" width="40" height="40" fill="white" filter="url(#glow)" style="transform-origin: 230px 160px; transition: transform 0.2s ease-out;"/>
+<!-- n -->
+<rect id="n1" x="310" y="60" width="40" height="120" fill="white" filter="url(#glow)" style="transform-origin: 330px 120px; transition: transform 0.2s ease-out;"/>
+<rect id="n2" x="310" y="60" width="80" height="40" fill="white" filter="url(#glow)" style="transform-origin: 350px 80px; transition: transform 0.2s ease-out;"/>
+<rect id="n3" x="390" y="100" width="40" height="80" fill="white" filter="url(#glow)" style="transform-origin: 410px 140px; transition: transform 0.2s ease-out;"/>
+</svg>
